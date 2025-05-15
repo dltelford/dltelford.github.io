@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beaverbrook Player Profile Evaluation Tool - 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-6 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center mb-6">Beaverbrook Player Profile Evaluation Tool – 2025</h1>
+        <form id="evaluationForm" class="space-y-8">
+            <!-- Player Name Field -->
+            <div class="bg-white p-4 rounded-lg shadow-md mb-6">
+                <label for="playerName" class="block text-lg font-medium mb-2">Player Name or Nickname</label>
+                <input type="text" id="playerName" name="playerName" required class="w-full p-2 border border-gray-300 rounded-lg" placeholder="Enter your name or nickname">
+            </div>
+
+            <!-- Instructions -->
+            <div class="bg-white p-4 rounded-lg shadow-md mb-6">
+                <h2 class="text-xl font-semibold mb-2">Self-Evaluation Instructions for Beaverbrook Players</h2>
+                <div class="text-sm text-gray-700">
+                    <h3 class="font-medium">Purpose</h3>
+                    <p>This guide helps you honestly assess your rugby skills and attributes using the Beaverbrook Player Profile Evaluation Tool. By evaluating yourself, you’ll identify strengths and areas for improvement to grow as a player. Be truthful—overestimating or underestimating your abilities won’t help you improve.</p>
+                    <h3 class="font-medium mt-4">How to Use the Evaluation Tool</h3>
+                    <p>The tool is divided into four components: Technical, Physical, Characteristics, and Specialized. Each component includes performance indicators with descriptors for ratings of 1, 3, and 5. You’ll score yourself from 1 to 5 based on these descriptors, using 2 or 4 if you fall between them.</p>
+                    <h3 class="font-medium mt-4">Steps for Self-Evaluation</h3>
+                    <ol class="list-decimal pl-5">
+                        <li><strong>Review the Components:</strong> Read the tables for Technical, Physical, Characteristics, and Specialized Components. Each table lists GMP numbers, performance indicators, and descriptors for ratings 1, 3, and 5.</li>
+                        <li><strong>Assess Your Performance:</strong>
+                            <ul class="list-disc pl-5">
+                                <li>For each GMP number (1–10), read the descriptors for ratings 1 (lowest), 3 (middle), and 5 (highest).</li>
+                                <li>Reflect on your performance in recent games, practices, or scrimmages. Consider feedback from coaches, teammates, or your own observations.</li>
+                                <li>Choose the descriptor that best matches your consistent performance. Be honest—think about what you do regularly, not just your best or worst moments.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Assign a Rating (1–5):</strong>
+                            <ul class="list-disc pl-5">
+                                <li>If your performance closely matches a descriptor, assign that rating (1, 3, or 5).</li>
+                                <li>If you’re between descriptors, use:
+                                    <ul class="list-disc pl-5">
+                                        <li>4: Between “Consistent” (3) and “Best” (5).</li>
+                                        <li>2: Between “Developing” (1) and “Consistent” (3).</li>
+                                    </ul>
+                                </li>
+                                <li>For example, if you sometimes scan effectively before receiving the ball but not always, you might score a 2 or 4 in GMP #2 (Attacking Performance).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Record Your Scores:</strong>
+                            <ul class="list-disc pl-5">
+                                <li>Select your rating (1–5) for each GMP number. This form combines Season and Playoff Games; use your overall performance unless instructed otherwise.</li>
+                                <li>If unsure, consult your coach later.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Calculate Your Total:</strong>
+                            <ul class="list-disc pl-5">
+                                <li>The form will sum your ratings (maximum score: 50) and calculate the decimal (sum/50) and percent (decimal × 100) when you download your responses.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h3 class="font-medium mt-4">Evaluation Criteria</h3>
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-200">
+                                <th class="p-2 border">Rating</th>
+                                <th class="p-2 border">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="p-2 border">5</td><td class="p-2 border">Best in Calgary / Mavericks or Div 1 walk-on</td></tr>
+                            <tr><td class="p-2 border">4</td><td class="p-2 border">Elite in 3rd Division</td></tr>
+                            <tr><td class="p-2 border">3</td><td class="p-2 border">Consistent in 3rd Division</td></tr>
+                            <tr><td class="p-2 border">2</td><td class="p-2 border">Average in 3rd Division</td></tr>
+                            <tr><td class="p-2 border">1</td><td class="p-2 border">Developing skills - room to improve to make starting side in 3rd Division</td></tr>
+                        </tbody>
+                    </table>
+                    <h3 class="font-medium mt-4">Tips for Honest Self-Assessment</h3>
+                    <ul class="list-disc pl-5">
+                        <li><strong>Be Realistic:</strong> Compare yourself to players in your division or team, not professionals. If you’re unsure, ask your coach for perspective.</li>
+                        <li><strong>Focus on Consistency:</strong> Rate what you do most of the time, not one-off moments.</li>
+                        <li><strong>Use Examples:</strong> For each GMP, think of specific plays. For GMP #1 (Defensive Performance), recall how often you make effective tackles or win turnovers.</li>
+                        <li><strong>Reflect on All Areas:</strong> Don’t skip components like Characteristics (Plays Beaverbrook Way). Attitude and effort are as important as skills.</li>
+                        <li><strong>Revisit Regularly:</strong> Self-evaluate monthly or after key games to track progress.</li>
+                    </ul>
+                    <h3 class="font-medium mt-4">Submission</h3>
+                    <p>Enter your name, select ratings for all 10 GMPs, and click “Download Responses” to save a JSON file. Email the file to your coach.</p>
+                </div>
+            </div>
+
+            <!-- Technical Components -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Technical Components</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-medium">1. Defensive Performance</h3>
+                        <p class="text-sm text-gray-600">Tackles Effectiveness, Turnover Winning</p>
+                        <div class="text-sm text-gray-700 mt-2">
+                            <p><strong>1:</strong> Rarely effective as an individual or team defender. Rarely manages time and space, rarely demonstrates in-depth knowledge of structured defensive system and in unstructured defensive situations.</p>
+                            <p><strong>3:</strong> Sometimes but inconsistently effective as an individual or team defender. Inconsistently manages time and space, sometimes demonstrates in-depth knowledge of structured defensive system and in unstructured defensive situations.</p>
+                            <p><strong>5:</strong> Always or consistently effective as an individual or team defender. Always manages time and space, consistently demonstrates in-depth knowledge of structured defensive system and in unstructured defensive situations.</p>
+                        </div>
+                        <div class="flex space-x-4 mt-2">
+                            <label><input type="radio" name="gmp1" value="1" class="mr-1"> 1</label>
+                            <label><input type="radio" name="gmp1" value="2" class="mr-1"> 2</label>
+                            <label><input type="radio" name="gmp1" value="3" class="mr-1"> 3</label>
+                            <label><input type="radio" name="gmp1" value="4" class="mr-1"> 4</label>
+                            <label><input type="radio" name="gmp1" value="5" class="mr-1"> 5</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium">2. Attacking Performance</h3>
+                        <p class="text-sm text-gray-600">Line Break/Defenders Beaten, Passing, Possession Retention</p>
+                        <div class="text-sm text-gray-700 mt-2">
+                            <p><strong>1:</strong> Rarely scans and ineffectively communicates prior to receiving and catching the ball (Strategic). Sporadically demonstrates effective distribution and/or re-distribution, executing skills (Technical/Tactical).</p>
+                            <p><strong>3:</strong> Sometimes scans and communicates effectively prior to receiving and catching the ball (Strategic). Inconsistently demonstrates effective distribution and/or re-distribution, executing skills (Technical/Tactical).</p>
+                            <p><strong>5:</strong> Always or consistently scans and communicates effectively prior to receiving and catching the ball (Strategic). Always demonstrates effective distribution and/or re-distribution, executing skills (Technical/Tactical).</p>
+                        </div>
+                        <div class="flex space-x-4 mt-2">
+                            <label><input type="radio" name="gmp2" value="1" class="mr-1"> 1</label>
+                            <label><input type="radio" name="gmp2" value="2" class="mr-1"> 2</label>
+                            <label><input type="radio" name="gmp2" value="3" class="mr-1"> 3</label>
+                            <label><input type="radio" name="gmp2" value="4" class="mr-1"> 4</label>
+                            <label><input type="radio" name="gmp2" value="5" class="mr-1"> 5</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium">3. Transition</h3>
+                        <p class="text-sm text-gray-600">Attacking and Defensive Transitions</p>
+                        <div class="text-sm text-gray-700 mt-2">
+                            <p><strong>1:</strong> Rarely adds excitement and continuity to attacking transitions - rarely connects before competing, has difficulty identifying and stopping the threat on defensive transitions.</p>
+                            <p><strong>3:</strong> Sometimes adds excitement and continuity to attacking transitions - sometimes connects before competing, has difficulty identifying and stopping the threat on defensive transitions.</p>
+                            <p><strong>5:</strong> Always adds excitement and continuity to attacking transitions - always connects before competing, has difficulty identifying and stopping the threat on defensive transitions.</p>
+                        </div>
+                        <div class="flex space-x-4 mt-2">
+                            <label><input type="radio" name="gmp3" value="1" class="mr-1"> 1</label>
+                            <label><input type="radio" name="gmp3" value="2" class="mr-1"> 2</label>
+                            <label><input type="radio" name="gmp3" value="3" class="mr-1"> 3</label>
+                            <label><input type="radio" name="gmp3" value="4" class="mr-1"> 4</label>
+                            <label><input type="radio" name="gmp3" value="5" class="mr-1"> 5</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Physical Components -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Physical Components</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-medium">4. Conditioning</h3>
+                        <p class="text-sm text-gray-600">Sustaining Intensity and Performance</p>
+                        <div class="text-sm text-gray-700 mt-2">
+                            <p><strong>1:</strong> Unable to complete half a match at moderate intensity levels. Consistently poor ability to maintain workrate. Notable changes in technical skills and tactical decision making when fatigued in match.</p>
+                            <p><strong>3:</strong> Good ability to achieve high intensity levels but unable to maintain these levels late into games and over competition weekends. Able to maintain moderate to high workrate for full games and weekends. Maintains good technical skills and tactical decisions when fatigued in match.</p>
+                            <p><strong>5:</strong> Elite conditioning. Able to sustain high levels of intensity throughout individual matches and also over competition weekends. Technical skills and tactical decision making does not vary no matter level of fatigue.</p>
+                        </div>
+                        <div class="flex space-x-4 mt-2">
+                            <label><input type="radio" name="gmp4" value="1" class="mr-1"> 1</label>
+                            <label><input type="radio" name="gmp4" value="2" class="mr-1"> 2</label>
+                            <label><input type="radio" name="gmp4" value="3" class="mr-1"> 3</label>
+                            <label><input type="radio" name="gmp4" value="4" class="mr-1"> 4</label>
+                            <label><input type="radio" name="gmp4" value="5" class="mr-1"> 5</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium">5. Speed and Agility</h3>
+                        <p class="text-sm text-gray-600">Offensive and Defensive Movement</p>
+                        <div class="text-sm text-gray-700 mt-2">
+                            <p><strong>1:</strong> Lack of speed/agility causes issues offensively with line breaks and creating space from opponents, and defensively in missed tackles and an inability to chase down opponents' linebreaks. Even when proper decisions are made, lack of speed limits on-field effectiveness.</p>
+                            <p><strong>3:</strong> Adequate speed/agility for positive gains when given offensive opportunities and can keep up with and catch some opponents defensively. Any drop-off in speed when fatigued leaves the athlete exposed both offensively and defensively. Good acceleration and top-end speed.</p>
+                            <p><strong>5:</strong> Elite speed/agility, regularly breaks away from opponents and is never outrun in a chasedown. Has an exceptional ability to accelerate away from opponents even when space is limited, leading to regular self-produced offensive opportunities and tries.</p>
+                        </div>
+                        <div class="flex space-x-4 mt-2">
+                            <label><input type="radio" name="gmp5" value="1" class="mr-1"> 1</label>
+                            <label><input type="radio" name="gmp5" value="2" class="mr-1"> 2</label>
+                            <label><input type="radio" name="gmp5" value="3" class="mr-1"> 3</label>
+                            <label><input type="radio" name="gmp5" value="4" class="mr-1"> 4</label>
+                            <label><input type="radio" name="gmp5" value="5" class="mr-1"> 5</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium">6. Power and Strength</h3>
+                        <p class="text-sm text-gray-600">Collisions, Rucks, and Tackles</p>
+                        <div class="text-sm text-gray-700 mt-2">
+                            <p><strong>1:</strong> Often loses collisions, rucks, and misses tackles due to lack of power and strength. Inadequate strength and power to be effective.</p>
+                            <p><strong>3:</strong> Sometimes able to use power and strength to cause missed tackles, win rucks, and does not lose collisions often.</p>
+                            <p><strong>5:</strong> Consistently uses strength to cause missed tackles, rarely loses rucking situations due to power or strength, and rarely ever loses 1-on-1 collisions at an international level. At times can take on two opponents and win at the contact point with elite power.</p>
+                        </div>
+                        <div class="flex space-x-4 mt-2">
+                            <label><input type="radio" name="gmp6" value="1" class="mr-1"> 1</label>
+                            <label><input type="radio" name="gmp6" value="2" class="mr-1"> 2</label>
+                            <label><input type="radio" name="gmp6" value="3" class="mr-1"> 3</label>
+                            <label><input type="radio" name="gmp6" value="4" class="mr-1"> 4</label>
+                            <label><input type="radio" name="gmp6" value="5" class="mr-1"> 5</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Characteristics -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Characteristics</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-medium">7. Plays Beaverbrook Way</h3>
+                        <p class="text-sm text-gray-600">Effort, Attitude, Competitiveness</p>
+                        <div class="text-sm text-gray-700 mt-2">
+                            <p><strong>1:</strong> Does not or rarely aspires to be a Division 1 competitor through their efforts and attitude. Below-average work rate on and off the ball. Inconsistent competitiveness on and off the pitch. Obvious lack of determination.</p>
+                            <p><strong>3:</strong> At times aspires to be a Division 1 competitor through their efforts and attitude. Inconsistent levels of work rate on and off the pitch. Competitiveness is inconsistent in matches & practices, dropping off occasionally due to motivation, focus, fatigue, or adversity. Inconsistent demonstration of competitive determination on and off the pitch. Competitive but inconsistent.</p>
+                            <p><strong>5:</strong> Consistently aspires to be a Division 1 competitor through their efforts and attitude. Relentless drive to succeed on and off the pitch. Consistent high-level competitor in all preparation and competitive environments. Never-quit attitude, especially when behind, or in challenging situations. Big-match competitor who thrives on the opportunity to make an impact on the outcome.</p>
+                        </div>
+                        <div class="flex space-x-4 mt-2">
+                            <label><input type="radio" name="gmp7" value="1" class="mr-1"> 1</label>
+                            <label><input type="radio" name="gmp7" value="2" class="mr-1"> 2</label>
+                            <label><input type="radio" name="gmp7" value="3" class="mr-1"> 3</label>
+                            <label><input type="radio" name="gmp7" value="4" class="mr-1"> 4</label>
+                            <label><input type="radio" name="gmp7" value="5" class="mr-1"> 5</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialized Components -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Specialized Components</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-medium">8. Kick Off Roles</h3>
+                        <p class="text-sm text-gray-600">Regain/Receive (Aerialist/Kicker/Exciter/Scanner)</p>
+                        <div class="text-sm text-gray-700 mt-2">
+                            <p><strong>1:</strong> Rarely accurate in their role (aerialist/kicker/exciter/scanner).</p>
+                            <p><strong>3:</strong> Sometimes accurate in their role (aerialist/kicker/exciter/scanner).</p>
+                            <p><strong>5:</strong> Highly accurate in their role (aerialist/kicker/exciter/scanner).</p>
+                        </div>
+                        <div class="flex space-x-4 mt-2">
+                            <label><input type="radio" name="gmp8" value="1" class="mr-1"> 1</label>
+                            <label><input type="radio" name="gmp8" value="2" class="mr-1"> 2</label>
+                            <label><input type="radio" name="gmp8" value="3" class="mr-1"> 3</label>
+                            <label><input type="radio" name="gmp8" value="4" class="mr-1"> 4</label>
+                            <label><input type="radio" name="gmp8" value="5" class="mr-1"> 5</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium">9. Set Piece</h3>
+                        <p class="text-sm text-gray-600">Scrum Roles (Attack and Defense)</p>
+                        <div class="text-sm text-gray-700 mt-2">
+                            <p><strong>1:</strong> Rarely or never technically effective in their functional roles (including feeder/thrower) - Attack (provide a solid platform and positive first-phase outcome) and defense (disrupt & apply pressure).</p>
+                            <p><strong>3:</strong> Sometimes but inconsistently technically effective in their functional roles (including feeder) in the scrum - attack (provide a solid platform and positive first-phase outcome) and defense scrums (disrupt & apply pressure).</p>
+                            <p><strong>5:</strong> Always & consistently technically highly effective in their functional roles (including feeder) in the scrum - attack (provide a solid platform and positive first-phase outcome) and defense scrums (disrupt & apply pressure).</p>
+                        </div>
+                        <div class="flex space-x-4 mt-2">
+                            <label><input type="radio" name="gmp9" value="1" class="mr-1"> 1</label>
+                            <label><input type="radio" name="gmp9" value="2" class="mr-1"> 2</label>
+                            <label><input type="radio" name="gmp9" value="3" class="mr-1"> 3</label>
+                            <label><input type="radio" name="gmp9" value="4" class="mr-1"> 4</label>
+                            <label><input type="radio" name="gmp9" value="5" class="mr-1"> 5</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium">10. Rugby Literacy</h3>
+                        <p class="text-sm text-gray-600">Preparation and In-Game Influence</p>
+                        <div class="text-sm text-gray-700 mt-2">
+                            <p><strong>1:</strong> Rarely demonstrates rugby literacy (RL) in preparation and the game. Tends to follow and react to events in the match.</p>
+                            <p><strong>3:</strong> Sometimes but inconsistently demonstrates RL in preparation and the game. Influence is inconsistent and tends to be limited to specific aspects rather than across the RL spectrum. In contexts, sometimes leads/follows/reacts, demonstrating the ability to influence key moments in a match.</p>
+                            <p><strong>5:</strong> Consistently demonstrates a high RL in preparation and in-game. Consistently leads in the influence and anticipation of key moments in a match.</p>
+                        </div>
+                        <div class="flex space-x-4 mt-2">
+                            <label><input type="radio" name="gmp10" value="1" class="mr-1"> 1</label>
+                            <label><input type="radio" name="gmp10" value="2" class="mr-1"> 2</label>
+                            <label><input type="radio" name="gmp10" value="3" class="mr-1"> 3</label>
+                            <label><input type="radio" name="gmp10" value="4" class="mr-1"> 4</label>
+                            <label><input type="radio" name="gmp10" value="5" class="mr-1"> 5</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="button" id="downloadBtn" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Download Responses</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', () => {
+            try {
+                const form = document.getElementById('evaluationForm');
+                const playerName = document.getElementById('playerName').value.trim();
+                const ratings = {};
+                let isComplete = true;
+
+                // Validate player name
+                if (!playerName) {
+                    alert('Please enter your name or nickname.');
+                    return;
+                }
+
+                // Collect ratings for GMP 1–10
+                for (let i = 1; i <= 10; i++) {
+                    const selected = form.querySelector(`input[name="gmp${i}"]:checked`);
+                    if (!selected) {
+                        isComplete = false;
+                        alert(`Please provide a rating for GMP #${i}.`);
+                        return;
+                    }
+                    ratings[`gmp${i}`] = parseInt(selected.value);
+                }
+
+                if (isComplete) {
+                    // Add player name and calculate totals
+                    ratings.playerName = playerName;
+                    const total = Object.values(ratings)
+                        .filter(val => typeof val === 'number')
+                        .reduce((sum, val) => sum + val, 0);
+                    ratings.total = total;
+                    ratings.decimal = (total / 50).toFixed(2);
+                    ratings.percent = ((total / 50) * 100).toFixed(2);
+
+                    // Create JSON file
+                    const json = JSON.stringify(ratings, null, 2);
+                    const blob = new Blob([json], { type: 'application/json' });
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    // Sanitize filename
+                    const safeName = playerName.replace(/[^a-zA-Z0-9_-]/g, '_');
+                    a.download = `${safeName}_evaluation.json`;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);
+                }
+            } catch (error) {
+                console.error('Error generating download:', error);
+                alert('An error occurred while generating the file. Please try again or contact your coach.');
+            }
+        });
+    </script>
+</body>
+</html>
