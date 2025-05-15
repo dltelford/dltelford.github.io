@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player Profiling Form – Beaverbrook 2025</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2, h3 { color: #333; }
+        p, label { line-height: 1.6; }
+        input[type="text"], textarea { width: 100%; max-width: 500px; padding: 5px; }
+        button { padding: 10px 20px; background-color: #007BFF; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
 </head>
 <body>
     <h1>Player Profiling Form – Beaverbrook 2025</h1>
@@ -12,11 +21,8 @@
     <p>We, your coaches—Mr. Aaron Horne, Mr. Sean Slaughter, Mr. Jarod Morrison, Mr. Edward Nelson, Mr. Byron Nelson, and Mr. Derrik Telford—want to extend our heartfelt thanks to each and every one of you. Your dedication, effort, and passion for rugby have made this season unforgettable. We're proud of your growth and excited to see where your rugby journey takes you next!</p>
 
     <h2>Instructions</h2>
-    <p>
-        <strong>Purpose:</strong> This form helps you honestly assess your rugby skills and attributes to identify strengths and areas for improvement, enhancing your contribution to the team. Be truthful—overestimating or underestimating your abilities won’t help you grow as a player.
-    </p>
-    <p>
-        <strong>Self-Evaluation:</strong> Rate yourself on each criterion based on your performance in recent games, practices, or scrimmages, using a scale of 1–5:
+    <p><strong>Purpose:</strong> This form helps you honestly assess your rugby skills and attributes to identify strengths and areas for improvement, enhancing your contribution to the team. Be truthful—overestimating or underestimating your abilities won’t help you grow as a player.</p>
+    <p><strong>Self-Evaluation:</strong> Rate yourself on each criterion based on your performance in recent games, practices, or scrimmages, using a scale of 1–5:
         <ul>
             <li>1 = Developing skills, rarely effective or appropriate (room to improve to make the starting side).</li>
             <li>2 = Average, sometimes effective but inconsistent (between 1 and 3 descriptors).</li>
@@ -25,50 +31,34 @@
             <li>5 = Best in your division, consistently exceptional.</li>
         </ul>
     </p>
-    <p>
-        <strong>Descriptors:</strong> For each criterion, read the descriptors for ratings 1, 3, and 5 to guide your self-assessment. Choose the rating that best matches your consistent performance, using 2 or 4 if you fall between descriptors.
-    </p>
-    <p>
-        <strong>Comments (optional):</strong> Add comments to justify your rating if desired (e.g., “Missed tackles in the last match due to poor positioning” or “Consistently won turnovers at rucks”). Focus on what you do regularly, not one-off moments. If unsure, consult your coach for perspective.
-    </p>
-    <p>
-        <strong>Tips for Honest Assessment:</strong>
+    <p><strong>Descriptors:</strong> For each criterion, read the descriptors for ratings 1, 3, and 5 to guide your self-assessment. Choose the rating that best matches your consistent performance, using 2 or 4 if you fall between descriptors.</p>
+    <p><strong>Comments (optional):</strong> Add comments to justify your rating if desired (e.g., “Missed tackles in the last match due to poor positioning” or “Consistently won turnovers at rucks”). Focus on what you do regularly, not one-off moments. If unsure, consult your coach for perspective.</p>
+    <p><strong>Tips for Honest Assessment:</strong>
         <ul>
             <li>Compare yourself to players in your division or team, not professionals.</li>
             <li>Use specific examples from games or practices to support your rating.</li>
             <li>Reflect on all areas, including Characteristics, as attitude and effort are as critical as skills.</li>
         </ul>
     </p>
-    <p>
-        <strong>Survey:</strong> At the end, complete the survey to provide feedback on your season experience and interest in summer rugby.
-    </p>
-    <p>
-        <strong>Submission:</strong> Complete the form, including the survey, and click “Download Responses” to save a PDF document. Email the PDF to your coach for review.
-    </p>
+    <p><strong>Survey:</strong> At the end, complete the survey to provide feedback on your season experience and interest in future rugby.</p>
+    <p><strong>Submission:</strong> Complete the form, including the survey, and click “Download Responses” to save a PDF document. Email the PDF to your coach for review.</p>
 
     <h2>Player Information</h2>
-    <label for="name">Name or Nickname</label>
+    <label for="name">Name or Nickname</label><br>
     <input type="text" id="name" name="name"><br><br>
-
     <label for="grade">Grade</label><br>
-    <input type="radio" id="grade10" name="grade" value="Grade 10">
-    <label for="grade10">Grade 10</label><br>
-    <input type="radio" id="grade11" name="grade" value="Grade 11">
-    <label for="grade11">Grade 11</label><br>
-    <input type="radio" id="grade12" name="grade" value="Grade 12">
-    <label for="grade12">Grade 12</label><br><br>
-
-    <label for="position">Position(s) Played</label>
+    <input type="radio" id="grade10" name="grade" value="Grade 10"> <label for="grade10">Grade 10</label><br>
+    <input type="radio" id="grade11" name="grade" value="Grade 11"> <label for="grade11">Grade 11</label><br>
+    <input type="radio" id="grade12" name="grade" value="Grade 12"> <label for="grade12">Grade 12</label><br><br>
+    <label for="position">Position(s) Played</label><br>
     <input type="text" id="position" name="position"><br><br>
 
     <h2>Tactical Attributes</h2>
     <h3>1. Game Awareness</h3>
     <p>Understands roles in attack and defense, applying principles of play (e.g., creating space, supporting play, or defending effectively).</p>
-    <p>
-        <strong>1:</strong> Rarely understands roles in attack or defense, often out of position or unaware of team strategy.<br>
-        <strong>3:</strong> Sometimes understands roles, applies principles of play inconsistently, occasionally misreads situations.<br>
-        <strong>5:</strong> Consistently understands roles, always applies principles of play effectively in attack and defense.
-    </p>
+    <p><strong>1:</strong> Rarely understands roles in attack or defense, often out of position or unaware of team strategy.<br>
+       <strong>3:</strong> Sometimes understands roles, applies principles of play inconsistently, occasionally misreads situations.<br>
+       <strong>5:</strong> Consistently understands roles, always applies principles of play effectively in attack and defense.</p>
     <input type="radio" name="game_awareness" value="1"> 1
     <input type="radio" name="game_awareness" value="2"> 2
     <input type="radio" name="game_awareness" value="3"> 3
@@ -77,11 +67,9 @@
 
     <h3>2. Decision-Making Under Pressure</h3>
     <p>Makes quick, effective decisions in high-pressure situations during open play or set pieces.</p>
-    <p>
-        <strong>1:</strong> Rarely makes effective decisions under pressure, often panics or chooses poorly.<br>
-        <strong>3:</strong> Sometimes makes effective decisions under pressure, but consistency varies with game intensity.<br>
-        <strong>5:</strong> Always makes quick, effective decisions under pressure, maintaining composure in critical moments.
-    </p>
+    <p><strong>1:</strong> Rarely makes effective decisions under pressure, often panics or chooses poorly.<br>
+       <strong>3:</strong> Sometimes makes effective decisions under pressure, but consistency varies with game intensity.<br>
+       <strong>5:</strong> Always makes quick, effective decisions under pressure, maintaining composure in critical moments.</p>
     <input type="radio" name="decision_making" value="1"> 1
     <input type="radio" name="decision_making" value="2"> 2
     <input type="radio" name="decision_making" value="3"> 3
@@ -90,11 +78,9 @@
 
     <h3>3. Positioning</h3>
     <p>Maintains optimal positioning to contribute to team strategy in attack (e.g., as a ball carrier, support, or decoy) and defense (e.g., joining breakdowns or maintaining defensive structure).</p>
-    <p>
-        <strong>1:</strong> Rarely in the right position, often caught out in attack or defense, missing opportunities to contribute.<br>
-        <strong>3:</strong> Sometimes positions correctly, contributes to team strategy but occasionally out of alignment.<br>
-        <strong>5:</strong> Always in optimal position, consistently contributes to team strategy in attack and defense.
-    </p>
+    <p><strong>1:</strong> Rarely in the right position, often caught out in attack or defense, missing opportunities to contribute.<br>
+       <strong>3:</strong> Sometimes positions correctly, contributes to team strategy but occasionally out of alignment.<br>
+       <strong>5:</strong> Always in optimal position, consistently contributes to team strategy in attack and defense.</p>
     <input type="radio" name="positioning" value="1"> 1
     <input type="radio" name="positioning" value="2"> 2
     <input type="radio" name="positioning" value="3"> 3
@@ -103,11 +89,9 @@
 
     <h3>4. Transition Effectiveness</h3>
     <p>Adds continuity and excitement in attacking transitions (e.g., connecting before competing) and identifies/stops threats in defensive transitions.</p>
-    <p>
-        <strong>1:</strong> Rarely contributes to attacking transitions, struggles to identify or stop threats in defensive transitions.<br>
-        <strong>3:</strong> Sometimes adds continuity to attacking transitions and identifies defensive threats, but inconsistent.<br>
-        <strong>5:</strong> Always drives attacking transitions with excitement and continuity, consistently stops defensive threats.
-    </p>
+    <p><strong>1:</strong> Rarely contributes to attacking transitions, struggles to identify or stop threats in defensive transitions.<br>
+       <strong>3:</strong> Sometimes adds continuity to attacking transitions and identifies defensive threats, but inconsistent.<br>
+       <strong>5:</strong> Always drives attacking transitions with excitement and continuity, consistently stops defensive threats.</p>
     <input type="radio" name="transition_effectiveness" value="1"> 1
     <input type="radio" name="transition_effectiveness" value="2"> 2
     <input type="radio" name="transition_effectiveness" value="3"> 3
@@ -116,11 +100,9 @@
 
     <h3>5. Rugby Literacy</h3>
     <p>Demonstrates preparation and in-game influence by anticipating and leading key moments in a match.</p>
-    <p>
-        <strong>1:</strong> Rarely demonstrates preparation or influence, reacts to events without anticipation.<br>
-        <strong> U3:</strong> Sometimes shows preparation and influences key moments, but impact is limited or inconsistent.<br>
-        <strong>5:</strong> Consistently demonstrates high preparation and leads key moments with strong in-game influence.
-    </p>
+    <p><strong>1:</strong> Rarely demonstrates preparation or influence, reacts to events without anticipation.<br>
+       <strong>3:</strong> Sometimes shows preparation and influences key moments, but impact is limited or inconsistent.<br>
+       <strong>5:</strong> Consistently demonstrates high preparation and leads key moments with strong in-game influence.</p>
     <input type="radio" name="rugby_literacy" value="1"> 1
     <input type="radio" name="rugby_literacy" value="2"> 2
     <input type="radio" name="rugby_literacy" value="3"> 3
@@ -130,11 +112,9 @@
     <h2>Technical Attributes</h2>
     <h3>6. Ball Handling</h3>
     <p>Catches and passes with soft hands, delivering the ball sympathetically under pressure (e.g., no bullet passes, effective distribution/re-distribution).</p>
-    <p>
-        <strong>1:</strong> Rarely catches or passes effectively, struggles under pressure, often delivers bullet passes.<br>
-        <strong>3:</strong> Sometimes catches and passes with soft hands, inconsistent under pressure.<br>
-        <strong>5:</strong> Always catches and passes with soft hands, delivers sympathetically even under high pressure.
-    </p>
+    <p><strong>1:</strong> Rarely catches or passes effectively, struggles under pressure, often delivers bullet passes.<br>
+       <strong>3:</strong> Sometimes catches and passes with soft hands, inconsistent under pressure.<br>
+       <strong>5:</strong> Always catches and passes with soft hands, delivers sympathetically even under high pressure.</p>
     <input type="radio" name="ball_handling" value="1"> 1
     <input type="radio" name="ball_handling" value="2"> 2
     <input type="radio" name="ball_handling" value="3"> 3
@@ -143,11 +123,9 @@
 
     <h3>7. Tackling Effectiveness</h3>
     <p>Executes tackles with proper form, achieving high completion rates (aim for 85–90% success) and winning turnovers when possible.</p>
-    <p>
-        <strong>1:</strong> Rarely completes tackles effectively, misses often, and rarely wins turnovers.<br>
-        <strong>3:</strong> Sometimes completes tackles with proper form, achieves moderate success rate (60–70%), occasionally wins turnovers.<br>
-        <strong>5:</strong> Consistently completes tackles with proper form, achieves high success rate (85–90%), often wins turnovers.
-    </p>
+    <p><strong>1:</strong> Rarely completes tackles effectively, misses often, and rarely wins turnovers.<br>
+       <strong>3:</strong> Sometimes completes tackles with proper form, achieves moderate success rate (60–70%), occasionally wins turnovers.<br>
+       <strong>5:</strong> Consistently completes tackles with proper form, achieves high success rate (85–90%), often wins turnovers.</p>
     <input type="radio" name="tackling_effectiveness" value="1"> 1
     <input type="radio" name="tackling_effectiveness" value="2"> 2
     <input type="radio" name="tackling_effectiveness" value="3"> 3
@@ -156,11 +134,9 @@
 
     <h3>8. Kicking Accuracy</h3>
     <p>Performs kicks (e.g., grubber, chip, box, or long kicks) accurately for territory, possession, or attack.</p>
-    <p>
-        <strong>1:</strong> Rarely executes accurate kicks, often misses targets or loses possession.<br>
-        <strong>3:</strong> Sometimes executes accurate kicks, achieves moderate success in gaining territory or possession.<br>
-        <strong>5:</strong> Always executes accurate kicks, consistently gains territory or possession with precision.
-    </p>
+    <p><strong>1:</strong> Rarely executes accurate kicks, often misses targets or loses possession.<br>
+       <strong>3:</strong> Sometimes executes accurate kicks, achieves moderate success in gaining territory or possession.<br>
+       <strong>5:</strong> Always executes accurate kicks, consistently gains territory or possession with precision.</p>
     <input type="radio" name="kicking_accuracy" value="1"> 1
     <input type="radio" name="kicking_accuracy" value="2"> 2
     <input type="radio" name="kicking_accuracy" value="3"> 3
@@ -169,11 +145,9 @@
 
     <h3>9. Breakdown Skills</h3>
     <p>Effectively secures or contests possession at rucks and mauls with proper technique.</p>
-    <p>
-        <strong>1:</strong> Rarely secures or contests possession effectively, often penalized or ineffective at breakdowns.<br>
-        <strong>3:</strong> Sometimes secures or contests possession with proper technique, but inconsistent in effectiveness.<br>
-        <strong>5:</strong> Always secures or contests possession with excellent technique, consistently effective at breakdowns.
-    </p>
+    <p><strong>1:</strong> Rarely secures or contests possession effectively, often penalized or ineffective at breakdowns.<br>
+       <strong>3:</strong> Sometimes secures or contests possession with proper technique, but inconsistent in effectiveness.<br>
+       <strong>5:</strong> Always secures or contests possession with excellent technique, consistently effective at breakdowns.</p>
     <input type="radio" name="breakdown_skills" value="1"> 1
     <input type="radio" name="breakdown_skills" value="2"> 2
     <input type="radio" name="breakdown_skills" value="3"> 3
@@ -182,11 +156,9 @@
 
     <h3>10. Set Piece Execution</h3>
     <p>Performs functional roles in scrums and lineouts (e.g., providing a stable platform, disrupting opposition, or accurate throwing/feeding) effectively in attack and defense.</p>
-    <p>
-        <strong>1:</strong> Rarely effective in set piece roles, struggles with technique or fails to contribute to stability/disruption.<br>
-        <strong>3:</strong> Sometimes effective in set piece roles, contributes inconsistently to stability or disruption.<br>
-        <strong>5:</strong> Always highly effective in set piece roles, consistently provides stability or disrupts opposition.
-    </p>
+    <p><strong>1:</strong> Rarely effective in set piece roles, struggles with technique or fails to contribute to stability/disruption.<br>
+       <strong>3:</strong> Sometimes effective in set piece roles, contributes inconsistently to stability or disruption.<br>
+       <strong>5:</strong> Always highly effective in set piece roles, consistently provides stability or disrupts opposition.</p>
     <input type="radio" name="set_piece_execution" value="1"> 1
     <input type="radio" name="set_piece_execution" value="2"> 2
     <input type="radio" name="set_piece_execution" value="3"> 3
@@ -196,11 +168,9 @@
     <h2>Physical Attributes</h2>
     <h3>11. Strength and Power</h3>
     <p>Possesses adequate strength and power (e.g., upper body, core, legs) to win collisions, rucks, and tackles, and prevent injuries.</p>
-    <p>
-        <strong>1:</strong> Often loses collisions, rucks, and tackles due to lack of strength and power, prone to injuries.<br>
-        <strong>3:</strong> Sometimes wins collisions, rucks, and tackles with adequate strength, but inconsistent.<br>
-        <strong>5:</strong> Consistently wins collisions, rucks, and tackles with elite strength and power, rarely loses contact situations.
-    </p>
+    <p><strong>1:</strong> Often loses collisions, rucks, and tackles due to lack of strength and power, prone to injuries.<br>
+       <strong>3:</strong> Sometimes wins collisions, rucks, and tackles with adequate strength, but inconsistent.<br>
+       <strong>5:</strong> Consistently wins collisions, rucks, and tackles with elite strength and power, rarely loses contact situations.</p>
     <input type="radio" name="strength_power" value="1"> 1
     <input type="radio" name="strength_power" value="2"> 2
     <input type="radio" name="strength_power" value="3"> 3
@@ -209,11 +179,9 @@
 
     <h3>12. Speed and Acceleration</h3>
     <p>Moves quickly to exploit gaps, chase kicks, or retreat in defense, with strong acceleration to break away or chase down opponents.</p>
-    <p>
-        <strong>1:</strong> Lacks speed/acceleration, struggles to exploit gaps or chase opponents, often exposed defensively.<br>
-        <strong>3:</strong> Adequate speed/acceleration, sometimes exploits gaps or chases effectively, but fatigues late in games.<br>
-        <strong>5:</strong> Elite speed/acceleration, regularly breaks away or chases down opponents, effective even when fatigued.
-    </p>
+    <p><strong>1:</strong> Lacks speed/acceleration, struggles to exploit gaps or chase opponents, often exposed defensively.<br>
+       <strong>3:</strong> Adequate speed/acceleration, sometimes exploits gaps or chases effectively, but fatigues late in games.<br>
+       <strong>5:</strong> Elite speed/acceleration, regularly breaks away or chases down opponents, effective even when fatigued.</p>
     <input type="radio" name="speed_acceleration" value="1"> 1
     <input type="radio" name="speed_acceleration" value="2"> 2
     <input type="radio" name="speed_acceleration" value="3"> 3
@@ -222,11 +190,9 @@
 
     <h3>13. Agility and Mobility</h3>
     <p>Demonstrates quick footwork, sidestepping, or swerving to evade opponents or maneuver effectively in attack and defense.</p>
-    <p>
-        <strong>1:</strong> Rarely demonstrates agility, struggles to evade opponents or maneuver effectively.<br>
-        <strong>3:</strong> Sometimes shows agility, can evade opponents or maneuver but inconsistent in execution.<br>
-        <strong>5:</strong> Always demonstrates elite agility, consistently evades opponents and maneuvers effectively.
-    </p>
+    <p><strong>1:</strong> Rarely demonstrates agility, struggles to evade opponents or maneuver effectively.<br>
+       <strong>3:</strong> Sometimes shows agility, can evade opponents or maneuver but inconsistent in execution.<br>
+       <strong>5:</strong> Always demonstrates elite agility, consistently evades opponents and maneuvers effectively.</p>
     <input type="radio" name="agility_mobility" value="1"> 1
     <input type="radio" name="agility_mobility" value="2"> 2
     <input type="radio" name="agility_mobility" value="3"> 3
@@ -235,11 +201,9 @@
 
     <h3>14. Conditioning</h3>
     <p>Sustains high-intensity performance throughout matches and competition weekends, with minimal drop-off in technical skills or decision-making when fatigued (e.g., aim for 4:45–5:25 min on the Bronco test).</p>
-    <p>
-        <strong>1:</strong> Unable to sustain moderate intensity for half a match, technical skills and decisions degrade when fatigued.<br>
-        <strong>3:</strong> Sustains high intensity for full games but fatigues over weekends, maintains moderate skills when tired.<br>
-        <strong>5:</strong> Elite conditioning, sustains high intensity across matches and weekends, skills and decisions unaffected by fatigue.
-    </p>
+    <p><strong>1:</strong> Unable to sustain moderate intensity for half a match, technical skills and decisions degrade when fatigued.<br>
+       <strong>3:</strong> Sustains high intensity for full games but fatigues over weekends, maintains moderate skills when tired.<br>
+       <strong>5:</strong> Elite conditioning, sustains high intensity across matches and weekends, skills and decisions unaffected by fatigue.</p>
     <input type="radio" name="conditioning" value="1"> 1
     <input type="radio" name="conditioning" value="2"> 2
     <input type="radio" name="conditioning" value="3"> 3
@@ -249,11 +213,9 @@
     <h2>Characteristics</h2>
     <h3>15. Mental Toughness</h3>
     <p>Maintains focus and resilience under adverse conditions or high-pressure situations.</p>
-    <p>
-        <strong>1:</strong> Rarely maintains focus or resilience, easily discouraged under pressure or adversity.<br>
-        <strong>3:</strong> Sometimes maintains focus and resilience, but wavers in challenging situations.<br>
-        <strong>5:</strong> Always maintains focus and resilience, thrives under pressure and adversity.
-    </p>
+    <p><strong>1:</strong> Rarely maintains focus or resilience, easily discouraged under pressure or adversity.<br>
+       <strong>3:</strong> Sometimes maintains focus and resilience, but wavers in challenging situations.<br>
+       <strong>5:</strong> Always maintains focus and resilience, thrives under pressure and adversity.</p>
     <input type="radio" name="mental_toughness" value="1"> 1
     <input type="radio" name="mental_toughness" value="2"> 2
     <input type="radio" name="mental_toughness" value="3"> 3
@@ -262,11 +224,9 @@
 
     <h3>16. Performance Under Pressure</h3>
     <p>Performs consistently and effectively in critical moments, managing nerves and maintaining composure.</p>
-    <p>
-        <strong>1:</strong> Rarely performs effectively in critical moments, often overwhelmed by nerves.<br>
-        <strong>3:</strong> Sometimes performs effectively in critical moments, but nerves impact consistency.<br>
-        <strong>5:</strong> Always performs effectively in critical moments, consistently composed under pressure.
-    </p>
+    <p><strong>1:</strong> Rarely performs effectively in critical moments, often overwhelmed by nerves.<br>
+       <strong>3:</strong> Sometimes performs effectively in critical moments, but nerves impact consistency.<br>
+       <strong>5:</strong> Always performs effectively in critical moments, consistently composed under pressure.</p>
     <input type="radio" name="performance_pressure" value="1"> 1
     <input type="radio" name="performance_pressure" value="2"> 2
     <input type="radio" name="performance_pressure" value="3"> 3
@@ -275,11 +235,9 @@
 
     <h3>17. Communication</h3>
     <p>Communicates clearly with teammates to align strategies and coordinate plays.</p>
-    <p>
-        <strong>1:</strong> Rarely communicates effectively, struggles to align with teammates or coordinate plays.<br>
-        <strong>3:</strong> Sometimes communicates clearly, but inconsistent in aligning strategies or coordinating plays.<br>
-        <strong>5:</strong> Always communicates clearly, consistently aligns strategies and coordinates plays with teammates.
-    </p>
+    <p><strong>1:</strong> Rarely communicates effectively, struggles to align with teammates or coordinate plays.<br>
+       <strong>3:</strong> Sometimes communicates clearly, but inconsistent in aligning strategies or coordinating plays.<br>
+       <strong>5:</strong> Always communicates clearly, consistently aligns strategies and coordinates plays with teammates.</p>
     <input type="radio" name="communication" value="1"> 1
     <input type="radio" name="communication" value="2"> 2
     <input type="radio" name="communication" value="3"> 3
@@ -288,11 +246,9 @@
 
     <h3>18. Effort and Competitiveness</h3>
     <p>Displays relentless effort, a never-quit attitude, and consistent competitiveness in matches and practices, thriving in challenging situations.</p>
-    <p>
-        <strong>1:</strong> Rarely shows effort or competitiveness, lacks determination in matches or practices.<br>
-        <strong>3:</strong> Sometimes shows effort and competitiveness, but motivation or focus drops in challenging situations.<br>
-        <strong>5:</strong> Consistently displays relentless effort and competitiveness, thrives in challenging situations with a never-quit attitude.
-    </p>
+    <p><strong>1:</strong> Rarely shows effort or competitiveness, lacks determination in matches or practices.<br>
+       <strong>3:</strong> Sometimes shows effort and competitiveness, but motivation or focus drops in challenging situations.<br>
+       <strong>5:</strong> Consistently displays relentless effort and competitiveness, thrives in challenging situations with a never-quit attitude.</p>
     <input type="radio" name="effort_competitiveness" value="1"> 1
     <input type="radio" name="effort_competitiveness" value="2"> 2
     <input type="radio" name="effort_competitiveness" value="3"> 3
@@ -361,8 +317,91 @@
 
     <script>
         function downloadResponses() {
-            // Placeholder for PDF generation logic
-            alert("PDF download functionality to be implemented.");
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            let y = 10;
+
+            doc.setFontSize(16);
+            doc.text("Player Profiling Form – Beaverbrook 2025", 10, y);
+            y += 10;
+
+            doc.setFontSize(12);
+            doc.text("Player Information", 10, y);
+            y += 10;
+            doc.text(`Name: ${document.getElementById('name').value || 'Not provided'}`, 10, y);
+            y += 10;
+            doc.text(`Grade: ${document.querySelector('input[name="grade"]:checked')?.value || 'Not selected'}`, 10, y);
+            y += 10;
+            doc.text(`Position(s): ${document.getElementById('position').value || 'Not provided'}`, 10, y);
+            y += 10;
+
+            doc.text("Tactical Attributes", 10, y);
+            y += 10;
+            doc.text(`1. Game Awareness: ${document.querySelector('input[name="game_awareness"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`2. Decision-Making: ${document.querySelector('input[name="decision_making"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`3. Positioning: ${document.querySelector('input[name="positioning"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`4. Transition Effectiveness: ${document.querySelector('input[name="transition_effectiveness"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`5. Rugby Literacy: ${document.querySelector('input[name="rugby_literacy"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+
+            doc.text("Technical Attributes", 10, y);
+            y += 10;
+            doc.text(`6. Ball Handling: ${document.querySelector('input[name="ball_handling"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`7. Tackling Effectiveness: ${document.querySelector('input[name="tackling_effectiveness"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`8. Kicking Accuracy: ${document.querySelector('input[name="kicking_accuracy"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`9. Breakdown Skills: ${document.querySelector('input[name="breakdown_skills"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`10. Set Piece Execution: ${document.querySelector('input[name="set_piece_execution"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+
+            doc.text("Physical Attributes", 10, y);
+            y += 10;
+            doc.text(`11. Strength and Power: ${document.querySelector('input[name="strength_power"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`12. Speed and Acceleration: ${document.querySelector('input[name="speed_acceleration"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`13. Agility and Mobility: ${document.querySelector('input[name="agility_mobility"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`14. Conditioning: ${document.querySelector('input[name="conditioning"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+
+            doc.text("Characteristics", 10, y);
+            y += 10;
+            doc.text(`15. Mental Toughness: ${document.querySelector('input[name="mental_toughness"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`16. Performance Under Pressure: ${document.querySelector('input[name="performance_pressure"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`17. Communication: ${document.querySelector('input[name="communication"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`18. Effort and Competitiveness: ${document.querySelector('input[name="effort_competitiveness"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+
+            doc.text("End of Season Survey", 10, y);
+            y += 10;
+            doc.text(`1. Overall Experience: ${document.querySelector('input[name="overall_experience"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`2. Team Environment: ${document.querySelector('input[name="team_environment"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`3. Skill Development: ${document.querySelector('input[name="skill_development"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`4. Coaching Support: ${document.querySelector('input[name="coaching_support"]:checked')?.value || 'Not rated'}`, 10, y);
+            y += 10;
+            doc.text(`5. Next Season Plans: ${document.querySelector('input[name="next_season"]:checked')?.value || 'Not selected'}`, 10, y);
+            y += 10;
+            doc.text(`6. Team Structure Preference: ${document.querySelector('input[name="team_structure"]:checked')?.value || 'Not selected'}`, 10, y);
+            y += 10;
+            doc.text(`7. Summer Rugby Interest: ${document.querySelector('input[name="summer_rugby"]:checked')?.value || 'Not selected'}`, 10, y);
+            y += 10;
+            doc.text(`Comments: ${document.querySelector('textarea[name="comments"]').value || 'None'}`, 10, y);
+
+            doc.save("Player_Profiling_Form_2025.pdf");
         }
     </script>
 </body>
